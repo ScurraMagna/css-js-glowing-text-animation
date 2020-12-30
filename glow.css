@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: consolas;
+  font-family: consola;
 }
 body {
   display: flex;
@@ -11,26 +11,29 @@ body {
   background-color: #000;
 }
 h1 {
-  color: #000;
   font-size: 6em;
   letter-spacing: 0.1em;
   display: flex;
 }
 h1 span {
-  animation: animate 4s linear infinite;
+  animation: animate 4s ease-in-out infinite;
 }
 @keyframes animate {
-  0%, 100% {
+  0%, 20% {
+    color: #000;
+    filter: blur(2px);
+    text-shadow: none;
+  }
+  50% {
     color: #FFF;
     filter: blur(2px);
     text-shadow: 0 0 10px #00B3FF,
                  0 0 20px #00B3FF,
                  0 0 40px #00B3FF,
                  0 0 80px #00B3FF,
-                 0 0 120px #00B3FF,
-                 0 0 200px #00B3FF;
+                 0 0 120px #00B3FF;
   }
-  25%, 75% {
+  80%, 100% {
     color: #000;
     filter: blur(2px);
     text-shadow: none;
